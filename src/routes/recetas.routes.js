@@ -1,21 +1,19 @@
 import {Router} from 'express';
-import { listarRecetas, crearReceta, obtenerReceta } from '../controllers/recetas.contoller';
+import { listarRecetas, crearReceta, obtenerReceta, borrarReceta, editarReceta } from '../controllers/recetas.contoller';
 //import {check} from 'express-validator';
-//import validarProducto from '../helpers/validacionProducto';
+//import validarReceta from '../helpers/validacionReceta';
 
 const router = Router();
 
-//crear todas las rutas que tienen que ver con los productos
+//crear todas las rutas que tienen que ver con las recetas
 router.route('/recetas')
 .get(listarRecetas)
 .post(crearReceta);
 
 
 router.route('/recetas/:id')
+.put(editarReceta) //TODO: agregar validaciones aqui tambien
+.delete(borrarReceta)
 .get(obtenerReceta);
-/*
-.put(editarProducto) //TODO: agregar validaciones aqui tambien
-.delete(borrarProducto);
-*/
 
 export default router;
