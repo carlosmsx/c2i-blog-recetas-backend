@@ -31,3 +31,15 @@ export const crearReceta = async(req,res) => {
         });
     }
 }
+
+export const obtenerReceta = async(req,res)=>{
+    try {
+        //buscar en la DB la receta
+        const receta = await Receta.findById(req.params.id);
+
+        //enviar la respuesta al frontend
+        res.status(200).json(receta);
+    } catch (error) {
+        res.status(404).json({ mensaje: "receta no encontrada" });
+    }
+}

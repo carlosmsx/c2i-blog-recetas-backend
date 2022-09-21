@@ -1,6 +1,5 @@
 import {Router} from 'express';
-import { listarRecetas, crearReceta } from '../controllers/recetas.contoller';
-//import { crearProducto, listarProductos, obtenerProducto, editarProducto, borrarProducto } from '../controllers/productos.controllers';
+import { listarRecetas, crearReceta, obtenerReceta } from '../controllers/recetas.contoller';
 //import {check} from 'express-validator';
 //import validarProducto from '../helpers/validacionProducto';
 
@@ -11,9 +10,10 @@ router.route('/recetas')
 .get(listarRecetas)
 .post(crearReceta);
 
-/*
+
 router.route('/recetas/:id')
-.get(obtenerProducto)
+.get(obtenerReceta);
+/*
 .put(editarProducto) //TODO: agregar validaciones aqui tambien
 .delete(borrarProducto);
 */
