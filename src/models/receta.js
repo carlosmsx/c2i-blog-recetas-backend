@@ -8,6 +8,10 @@ const recetaSchema = new Schema({
         maxLength: 50,
         unique: true
     },
+    imagen: {
+        type: String,
+        required: true
+    },
     descripcion: {
         type: String,
         required: true        
