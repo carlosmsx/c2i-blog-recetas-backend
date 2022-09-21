@@ -12,7 +12,11 @@ const recetaSchema = new Schema({
         type: String,
         required: true
     },
-    descripcion: {
+    ingredientes: {
+        type: String,
+        required: true        
+    },
+    instrucciones: {
         type: String,
         required: true        
     }
