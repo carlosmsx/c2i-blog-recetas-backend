@@ -1,7 +1,7 @@
 import express, { response } from 'express'; 
 import morgan from 'morgan'; 
 import cors from 'cors';
-//import './src/database';
+import './src/database';
 import router from './src/routes/recetas.routes';
 import path from 'path';
 
