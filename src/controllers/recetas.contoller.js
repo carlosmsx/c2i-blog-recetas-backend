@@ -27,7 +27,7 @@ export const crearReceta = async(req,res) => {
         //si algo falla tambien enviar una respuesta
     } catch (error) {
         res.status(400).json({
-            mensaje: "La receta no pudo ser creada",
+            mensaje: "La receta no pudo ser creada"
         });
     }
 }

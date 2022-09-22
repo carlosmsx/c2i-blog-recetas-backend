@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import './src/database';
 import router from './src/routes/recetas.routes';
+import authRouter from './src/routes/usuarios.routes';
 import path from 'path';
 
 const app = express();
@@ -27,3 +28,4 @@ console.log(__dirname);
 
 //rutas
 app.use('/api', router);
+app.use('/api', authRouter);
