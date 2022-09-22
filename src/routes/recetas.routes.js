@@ -8,7 +8,7 @@ const router = Router();
 //crear todas las rutas que tienen que ver con las recetas
 router.route('/recetas')
 .get(listarRecetas)
-.post(crearReceta);
+.post(crearReceta); //TODO: agregar validaciones
 
 
 router.route('/recetas/:id')

@@ -55,5 +55,16 @@ export const borrarReceta = async(req,res)=>{
 }
 
 export const editarReceta = async(req,res)=>{
+    try {
+        //validar
+        console.log(req.params.id);
+        console.log(req.body);
 
+        //buscar
+        await Receta.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).json({mensaje: "edicion ok"});
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({mensaje:"edicion error"});
+    }
 }
